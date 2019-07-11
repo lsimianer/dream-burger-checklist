@@ -1,9 +1,9 @@
-<h1>Lukes Premium <a>cardiac health </a> & burger joint clinic</h1>
+<h1 id="head">Lukes Premium <a id="apples">cardiac health </a> & burger joint clinic</h1>
 
-<h2>Welcome to the burger tracker, you dont watch your caloric intake but you do watch those tasty cow circles<br>
+<h2 id="welcome">Welcome to the burger tracker, you dont watch your caloric intake but you do watch those tasty cow circles<br>
 Here's the ones you havent eaten yet</h2>
 
-<ul>
+<ul class="list">
   {{#each burgers}}
     {{#unless devoured}}
       {{> burgers/burger-block devoured=true}}
@@ -11,9 +11,9 @@ Here's the ones you havent eaten yet</h2>
   {{/each}}
 </ul>
 
-<h2>burgers that are devoured!</h2>
+<h2 id="devoured">burgers that are devoured!</h2>
 
-<ul>
+<ul class="list">
   {{#each burgers}}
     {{#if devoured}}
       {{> burgers/burger-block devoured=false}}
