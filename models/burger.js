@@ -1,13 +1,28 @@
-var orm = require("./config/orm.js");
+var orm = require("../config/orm.js");
 
-// Find all the devoured ordering by the lowest price to the highest price.
-orm.selectAndOrder("burger_name", "devoured", "price");
+var burger = {
+  all: function(cb) {
+    orm.all("burgers", function(res) {
+      cb(res);
+    });
+  },
+  // The variables cols and vals are arrays.
+  create: function(cols, vals, cb) {
+    orm.create("burgers", cols, vals, function(res) {
+      cb(res);
+    });
+  },
+  update: function(cols, vals, condition, cb) {
+    orm.update("burgers", cols, vals, condition, function(res) {
+      cb(res);
+    });
+  },
+  delete: function(condition, cb) {
+    orm.delete("burgers", condition, function(res) {
+      cb(res);
+    });
+  }
+};
 
-// Find a pet in the devoured table by an burger_name of Rachel.
-orm.selectWhere("devoured", "burger_name");
-
-// Find the buyer with the most devoured.
-// orm.findWhoHasMost("buyer_name", "buyer_id", "buyers", "devoured");
-
-
+// Export the database functions for the controller (burger.js)
 module.exports = burger;
