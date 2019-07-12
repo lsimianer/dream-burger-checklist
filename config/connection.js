@@ -19,4 +19,4 @@ connection.connect(function(err) {
 module.exports = connection;
 
 
-"mysql://baed21bf7258df:b60b61e0@us-cdbr-iron-east-02.cleardb.net/heroku_1c2fb4f3b3ae295?reconnect=true"
+// "mysql://baed21bf7258df:b60b61e0@us-cdbr-iron-east-02.cleardb.net/heroku_1c2fb4f3b3ae295?reconnect=true"
