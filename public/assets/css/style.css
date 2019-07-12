@@ -149,6 +149,11 @@
   to   { transform: rotate(360deg) translateX(250px) rotate(-360deg); }
 }
 
+@keyframes myOrbit2 {
+  from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(250px) rotate(-360deg); }
+}
+
 @keyframes BackgroundAnimated {
   from {
       background-position:0 0
@@ -160,6 +165,7 @@
 /* end animation list */
 
 body{
+  font-family: 'Permanent Marker', cursive;
   color: whitesmoke;
   background-color: black;
   background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
@@ -167,6 +173,7 @@ body{
 
 
 .list {
+  min-height: 12rem;
   border-radius: 12px;
   width: auto;
   padding: 5px;
@@ -243,9 +250,13 @@ body{
   text-align: center;
   font-size: 1.35rem;
   color: whitesmoke;
+  font-family: 'Permanent Marker', cursive;
+
 }
   
 button{
+  font-family: 'Permanent Marker', cursive;
+
   border-radius: 20%;
   width: fit-content;
   background-color: black;
@@ -254,6 +265,28 @@ button{
 }
 
 button:hover{
-  background-color: black;
-  color: whitesmoke;  
+  background-color: gold;
+  color: red;  
+}
+#add{
+  text-align: center;
+}
+
+#addform{
+  font-family: 'Permanent Marker', cursive;
+
+  text-align: center;
+}
+
+#devy{
+font-size: 1.5rem;
+}
+
+#burgerLeft{
+  animation: slideInLeft 5.75s ease both, fly 22s linear infinite; 
+  font-size: 4.5rem;
+}
+#burgerRight{
+  animation: slideInRight 5.75s ease both, fly 15s linear infinite; 
+  font-size: 4.5rem;
 }
